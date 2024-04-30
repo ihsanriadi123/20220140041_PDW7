@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Kereta Api Indonesia (Persero)</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Styling for the navbar */
+    .navbar-custom {
+      background-color: #00479b; /* Dark blue */
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+      color: #FFFFFF; /* White */
+    }
+    .navbar-custom .navbar-nav .nav-link {
+      color: #FFFFFF; /* White */
+    }
+    .navbar-custom .navbar-nav .nav-link:hover {
+      color: #FFFFFF; /* White */
+    }
+    .navbar-custom .navbar-toggler {
+      border-color: blue; /* White */
+    }
+    .navbar-custom .navbar-toggler-icon {
+      background-color: #FFFFFF; /* White */
+    }
+    /* Styling for the footer */
+    .footer {
+      background-color: #00479b; /* Dark blue */
+      color: #FFFFFF; /* White */
+      padding: 30px 0;
+      text-align: center;
+    }
+    /* Styling for the main content */
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .ticket-form {
+      background-color: #f7f7f7; /* Light gray */
+      padding: 30px;
+      border-radius: 10px;
+    }
+    .schedule-table {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="#">KAI Beranda</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Layanan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Jadwal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Berita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tentang Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Beli Tiket</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Beli Tiket Kereta Api</h2>
+      <form class="ticket-form">
+        <div class="form-group">
+          <label for="departure">Keberangkatan</label>
+          <input type="text" class="form-control" id="departure" placeholder="Stasiun Keberangkatan">
+        </div>
+        <div class="form-group">
+          <label for="destination">Tujuan</label>
+          <input type="text" class="form-control" id="destination" placeholder="Stasiun Tujuan">
+        </div>
+        <div class="form-group">
+          <label for="date">Tanggal Keberangkatan</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <button type="submit" class="btn btn-primary">Cari Tiket</button>
+      </form>
+      <div class="schedule-table" id="schedule-table" style="display: none;">
+        <h3>Hasil Pencarian</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Kereta</th>
+              <th>Keberangkatan</th>
+              <th>Tujuan</th>
+              <th>Jam</th>
+              <th>Harga</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Argo Wilis</td>
+              <td>Yogyakarta</td>
+              <td>Surabaya Gubeng</td>
+              <td>13:38</td>
+              <td>Rp 340.000</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Argo Semeru</td>
+              <td>Yogyakarta</td>
+              <td>Surabaya Gubeng</td>
+              <td>13:00</td>
+              <td>Rp 350.000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Sancaka</td>
+              <td>Yogyakarta</td>
+              <td>Surabaya Gubeng</td>
+              <td>11:30</td>
+              <td>Rp 250.000</td>
+            </tr>
+            <td>4</td>
+              <td>Ranggajati</td>
+              <td>Yogyakarta</td>
+              <td>Surabaya Gubeng</td>
+              <td>11:38</td>
+              <td>Rp 255.000</td>
+            <tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="https://redigest.web.id/wp-content/uploads/2022/07/DSC01778-scaled.jpg" alt="Image" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>Hak Cipta &copy; 2024 PT Kereta Api Indonesia (Persero)</p>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // JavaScript to show the schedule table upon form submission
+  $(document).ready(function() {
+    $('.ticket-form').submit(function(e) {
+      e.preventDefault(); // Prevent form submission
+      $('#schedule-table').show(); // Show the schedule table
+    });
+  });
+</script>
+</body>
+</html>
